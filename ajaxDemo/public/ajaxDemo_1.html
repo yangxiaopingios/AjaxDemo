@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ajaxDemo_1</title>
+</head>
+
+<body>
+    这是一个有跨域问题的页面
+    <script src="./jquery.min.js"></script>
+    <script type="text/javascript">
+    $.ajax({
+        type: "get",
+        cache: false,
+        url: 'http://apis.juhe.cn/oil/region?key=1b9411b68adda384780872fabcafc16d&city=%e5%8c%97%e4%ba%ac',
+        dataType: "json",
+        success: function(result) {
+            console.log(JSON.stringify(result));
+        },
+        error: function(err) {
+            console.log('err10: ');
+            console.log(err);
+        }
+    });
+    </script>
+</body>
+
+</html>
